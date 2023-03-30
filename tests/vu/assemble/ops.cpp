@@ -481,7 +481,7 @@ LowerOp B(s16 imm11) {
 }
 
 LowerOp BAL(Reg t, s16 imm11) {
-	return LowerType7(OP_BAL, DEST_NONE, VF00, t, SIMM11(imm11));
+	return LowerType7(OP_BAL, DEST_NONE, VF00, VI(t), SIMM11(imm11));
 }
 
 LowerOp DIV(Field fsf, Reg s, Field ftf, Reg t) {
