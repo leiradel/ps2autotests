@@ -670,7 +670,7 @@ LowerOp JR(Reg s) {
 }
 
 LowerOp LQ(Dest dest, Reg t, Reg s, s16 imm11) {
-	return LowerType7(OP_LQ, dest, VI(s), t, imm11);
+	return LowerType7(OP_LQ, dest, VI(s), t, SIMM11(imm11));
 }
 
 LowerOp LQD(Dest dest, Reg t, Reg s) {
@@ -722,7 +722,7 @@ LowerOp RXOR(Field fsf, Reg s) {
 }
 
 LowerOp SQ(Dest dest, Reg s, Reg t, s16 imm11) {
-	return LowerType7(OP_SQ, dest, s, VI(t), imm11);
+	return LowerType7(OP_SQ, dest, s, VI(t), SIMM11(imm11));
 }
 
 LowerOp SQD(Dest dest, Reg s, Reg t) {
